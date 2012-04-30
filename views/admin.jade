@@ -1,0 +1,12 @@
+form.well.form-inline(method="post", action="/admin/addUser")
+  input(type="text", placeholder="Name", name="name")
+  input(type="submit", value="Create infidel").btn
+table.table.table-striped.table-bordered(style="text-align:middle")
+  tr
+    th Name
+    th Actions
+  -each val, key in users
+    tr
+      td #{val.name}
+      td.span1
+        input(type="button",value="Set free", data-id="#{val._id}").btn.btn-mini.btn-danger

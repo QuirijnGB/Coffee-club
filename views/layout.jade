@@ -1,0 +1,26 @@
+!!!
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+    script(src='/javascripts/actions.js')
+    
+  div#wrapper
+    div.navbar
+      div.navbar-inner
+        div.container
+          a.brand Coffee club
+          ul.nav
+              - var obj = { '/': 'Home', '/admin': 'Admin'}
+                  - each val, key in obj
+                    - if (id == key) 
+                      li.active
+                       a(href='#{key}') #{val}
+                    - else
+                      li
+                        a(href='#{key}') #{val}
+    div#content
+      body!= body

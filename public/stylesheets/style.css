@@ -1,0 +1,26 @@
+html {
+	background-color:#EEE;
+}
+body {
+	background-color:#EEE;
+}
+
+a {
+	color: #00B7FF;
+}
+#wrapper {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+#content{
+	padding:20px;
+	background-color:#FFF;
+}
+.progress{
+	margin-bottom:0px;
+}
+.bar{
+	width:20%;
+}
