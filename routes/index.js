@@ -3,6 +3,8 @@
  */
 
 var database = require('../lib/database');
+
+
 exports.index = function(req, res) {
 	database.getUsers(function(err, doc) {
 		if(err) {
@@ -16,6 +18,8 @@ exports.index = function(req, res) {
 		})
 	})
 };
+
+
 exports.update = function(req, res) {
 	console.log("Updating")
 	database.updateUser(req.body, function(err, doc) {

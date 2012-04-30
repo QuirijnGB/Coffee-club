@@ -8,7 +8,7 @@ $(function() {
 		console.log(btn.attr('data-times'))
 		var data = {
 			id : btn.attr('data-id'),
-			timesBought : btn.attr('data-times')
+			totalTimesBought : btn.attr('data-times')
 		}
 		console.log(data)
 		var url = "/update"

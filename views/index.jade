@@ -28,3 +28,11 @@ table.table.table-striped.table-bordered(style="text-align:middle")
   -else
     tr
       td(colspan="5", style="text-align:center;") No Users
+      td.span2 #{val.name}
+      td.span2 #{val.date.toDateString() }
+      td.span2 #{val.totalTimesBought }
+      td
+        div.progress
+          div.bar(style="width:10%")
+      td.span1
+        input.relieve(type="button",value="Relieve", data-id="#{val._id}", data-times="#{val.totalTimesBought}").btn.btn-mini.btn-primary
