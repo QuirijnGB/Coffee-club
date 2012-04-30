@@ -2,7 +2,7 @@ div.hero-unit
   -if (users[0])
     p Next up is...
     h1 #{users[0].name}
-    input.relieve(type="button",value="Relieve", data-id="#{users[0]._id}", data-times="#{users[0].timesBought}").btn.btn-large.btn-primary
+    input.relieve(type="button",value="Relieve", data-id="#{users[0]._id}", data-times="#{users[0].totalTimesBought}").btn.btn-large.btn-primary
   -else
     h1 No users
 
@@ -19,12 +19,12 @@ table.table.table-striped.table-bordered(style="text-align:middle")
       tr
         td.span2 #{val.name}
         td.span2 #{val.date.toDateString() }
-        td.span2 #{val.timesBought }
+        td.span2 #{val.totalTimesBought }
         td
           div.progress
             div.bar(style="width:10%")
         td.span1
-          input.relieve(type="button",value="Relieve", data-id="#{val._id}", data-times="#{val.timesBought}").btn.btn-mini.btn-primary
+          input.relieve(type="button",value="Relieve", data-id="#{val._id}", data-times="#{val.totalTimesBought}").btn.btn-mini.btn-primary
   -else
     tr
       td(colspan="5", style="text-align:center;") No Users
