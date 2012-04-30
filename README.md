@@ -7,6 +7,7 @@ A simple Node.js application to keep track of who is next to buy a bag of coffee
 * Node.js
 * Express
 * Mongoose 
+* Jade
 
 ## Current features
 
