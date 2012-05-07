@@ -10,7 +10,6 @@ exports.index = function(req, res) {
 		if(err) {
 			res.send(err)
 		}
-		console.log(doc)
 		res.render('index', {
 			title : 'Overview - Coffee Club',
 			id : '/',

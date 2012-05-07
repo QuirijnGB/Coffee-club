@@ -1,3 +1,9 @@
+-if (error)
+  div#name_alert.alert.alert-error.alert-block
+    button.close(data-dismiss="alert") x
+    p #{error}
+- else
+  fadsf
 form.well.form-inline(method="post", action="/admin/addUser")
   input(type="text", placeholder="Name", name="name")
   input(type="submit", value="Create infidel").btn
@@ -9,4 +15,6 @@ table.table.table-striped.table-bordered(style="text-align:middle")
     tr
       td #{val.name}
       td.span1
-        input(type="button",value="Set free", data-id="#{val._id}").btn.btn-mini.btn-danger
+        form.form-inline(method="post", action="/admin/removeUser")
+          input(type="submit",value="Set free", data-id="#{val._id}").btn.btn-mini.btn-danger
+          input(type="hidden",value="#{val._id}", name="id")

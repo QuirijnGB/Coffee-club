@@ -8,6 +8,9 @@ body {
 a {
 	color: #00B7FF;
 }
+form{
+	margin:0px;
+}
 #wrapper {
 	width: 800px;
 	margin-left: auto;
@@ -24,3 +27,4 @@ a {
 .bar{
 	width:20%;
 }
+

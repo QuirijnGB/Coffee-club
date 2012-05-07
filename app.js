@@ -32,6 +32,7 @@ app.configure('production', function() {
 app.get('/', routes.index);
 app.get('/admin', admin.index);
 app.post('/admin/addUser', admin.create);
+app.post('/admin/removeUser', admin.remove);
 app.post('/update', routes.update);
 
 app.listen(5000, function() {
