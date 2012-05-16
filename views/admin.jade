@@ -10,10 +10,15 @@ form.well.form-inline(method="post", action="/admin/addUser")
 table.table.table-striped.table-bordered(style="text-align:middle")
   tr
     th Name
+    th.span2 Handicap
     th Actions
   -each val, key in users
     tr
       td #{val.name}
+      td 
+        div.input-append
+          input(type="text", value="#{val.handicap}", data-id="#{val._id}").span1.handicap
+          span.add-on /10
       td.span1
         form.form-inline(method="post", action="/admin/removeUser")
           input(type="submit",value="Set free", data-id="#{val._id}").btn.btn-mini.btn-danger

@@ -26,7 +26,7 @@ exports.create = function(req, res) {
 				if(err) {
 					res.send(err)
 				}
-				res.render('admin', {
+				res.redirect('/admin', {
 					title : 'Express',
 					id : '/admin',
 					users : doc,
@@ -49,7 +49,7 @@ exports.create = function(req, res) {
 	}
 };
 exports.remove = function(req, res) {
-	console.log(req.body.id)
+	//console.log(req.body.id)
 	database.deleteUser(req.body.id, function(err, doc) {
 		if(err) {
 			res.send(err)

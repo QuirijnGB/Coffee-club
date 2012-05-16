@@ -21,8 +21,10 @@ exports.index = function(req, res) {
 
 exports.update = function(req, res) {
 	console.log("Updating")
+	console.log(req.body)
 	database.updateUser(req.body, function(err, doc) {
 		if(err) {
+		console.log(err)
 			res.send(err)
 		}
 		console.log("doc")
