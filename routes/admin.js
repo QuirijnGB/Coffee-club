@@ -15,10 +15,12 @@ exports.index = function(req, res) {
 		})
 	})
 };
+
+
 exports.create = function(req, res) {
 	var name = req.body.name
 	if(name) {
-		database.createUser(name, function(err, doc) {
+		database.createUser(name, function(err) {
 			if(err) {
 				res.send(err)
 			}
@@ -26,8 +28,8 @@ exports.create = function(req, res) {
 				if(err) {
 					res.send(err)
 				}
-				res.redirect('/admin', {
-					title : 'Express',
+				res.render('admin', {
+					title : 'Admin - Coffee Club',
 					id : '/admin',
 					users : doc,
 					error : ''
@@ -48,6 +50,8 @@ exports.create = function(req, res) {
 		})
 	}
 };
+
+
 exports.remove = function(req, res) {
 	//console.log(req.body.id)
 	database.deleteUser(req.body.id, function(err, doc) {
