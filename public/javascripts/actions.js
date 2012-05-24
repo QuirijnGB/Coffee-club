@@ -8,7 +8,8 @@ $(function() {
 		console.log(btn.attr('data-times'))
 		var data = {
 			id : btn.attr('data-id'),
-			totalTimesBought : (parseInt(btn.attr('data-times')) + 1)
+			timesBought : (parseInt(btn.attr('data-times')) + 1),
+			date: Date.now()
 		}
 		console.log(data)
 		var url = "/update"
