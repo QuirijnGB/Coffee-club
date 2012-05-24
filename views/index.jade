@@ -12,19 +12,19 @@ table.table.table-striped.table-bordered(style="text-align:middle")
     th Name
     th Last bought on
     th Times bought
-    th Something
+    th % Times Bought
     th Actions
   -if (users[0])
     -each val, key in users
       tr
         td.span2 #{val.name}
         td.span2 #{val.date.toDateString() }
-        td.span2 #{val.totalTimesBought }
+        td.span2 #{val.timesBought }
         td
           div.progress
-            div.bar(style="width:10%")
+            div.bar(style="width:#{val.totalTimesBought}%")
         td.span1
-          input.relieve(type="button",value="Relieve", data-id="#{val._id}", data-times="#{val.totalTimesBought}").btn.btn-mini.btn-primary
+          input.relieve(type="button",value="Relieve", data-id="#{val._id}", data-times="#{val.timesBought}").btn.btn-mini.btn-primary
   -else
     tr
       td(colspan="5", style="text-align:center;") No Users

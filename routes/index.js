@@ -27,13 +27,10 @@ exports.update = function(req, res) {
 		console.log(err)
 			res.send(err)
 		}
-		console.log("doc")
-		console.log(doc)
 		database.getUsers(function(err, doc) {
 			if(err) {
 				res.send(err)
 			}
-			console.log(doc)
 			res.render('index', {
 				title : 'Overview - Coffee Club',
 				id : '/',
